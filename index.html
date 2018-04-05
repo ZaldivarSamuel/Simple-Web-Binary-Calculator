@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script>
+  function AddBinary(){
+
+    var binary1 = document.getElementById('binary1').value;
+    var binary2 = document.getElementById('binary2').value;
+
+    let sum = (parseInt(binary1, 2) + parseInt(binary2, 2)).toString(2);
+
+    document.getElementById('outputDiv').innerHTML = "<h1>The answer is: " + sum + "</h1>";
+
+  }
+  </script>
+</head>
+<body>
+<h1 id="title">Binary Calculator</h1>
+
+<div id="calDiv">
+  <form>
+    <input type="text" id="binary1" name="binary1" placeholder="Binary Number">
+    <h1 id="operation">+</h1>
+    <input type="text" id="binary2" name="binary2" placeholder="Binary Number">
+  </form>
+  <button onclick="AddBinary()">Add</button>
+</div>
+  <div id="outputDiv"></div>
+</body>
+</html>
